@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Fahad Kamran">
+    <meta name="keyword" content="Fahad Kamran, Resume, CV, Web Developer, Ui Designer">
+    <title>Fahad Kamran Resume</title>
+    <script async src="https://kit.fontawesome.com/1cb4e2d48a.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            /* print background-color: ; */
+            -webkit-print-color-adjust: exact;
+        }
+
+        body {
+            color: #505561;
+            font-family: var(--font-secondary);
+        }
+
+        :root {
+            --font-primary: 'Exo 2', sans-serif;
+            --font-secondary: 'Nunito Sans', sans-serif;
+            --text-primary: #002b7f;
+            --text-secondary: #f96c07;
+        }
+
+        .a4-size {
+            width: 21cm;
+            height: 29.7cm;
+            border: 2px solid #000;
+            margin: auto;
+            padding: 50px;
+            background-color: rgb(253, 253, 253);
+        }
+
+        .heading {
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+            font-weight: 500;
+        }
+
+        .designation {
+            color: var(--text-secondary);
+            font-family: var(--font-primary);
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .subheading {
+            color: var(--text-primary);
+            font-family: var(--font-primary);
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .text-secondary {
+            color: var(--text-secondary);
+        }
+
+        .border {
+            border: 1px solid #000;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .d-flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .section:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .header-content {
+            margin-top: 10px;
+        }
+
+        .header-content>div {
+            width: 33.33%;
+            margin-bottom: 6px;
+        }
+
+        .header-content .icon {
+            color: var(--text-secondary);
+            font-size: 13px;
+            margin-right: 2px;
+        }
+
+        .header-link {
+            font-size: 13px;
+            color: #505561;
+            font-weight: 600;
+        }
+
+        .section .discription {
+            font-size: 15px;
+            font-weight: 600;
+            text-align: justify;
+        }
+
+        .date {
+            color: var(--text-primary);
+            font-size: 15px;
+            font-weight: 700;
+        }
+
+        .left {
+            width: 180px;
+        }
+
+        .right .title {
+            color: var(--text-primary);
+            font-size: 18px;
+            font-weight: 600;
+            font-family: var(--font-primary);
+        }
+
+        .right .icon {
+            font-size: 12px;
+        }
+
+        .right .link {
+            font-size: 12px;
+            color: #505561;
+            font-weight: 600;
+        }
+
+        .right {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .right::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            border: 1px solid #606060;
+            height: 80%;
+            top: 10%;
+        }
+
+        .right::before {
+            position: absolute;
+            content: '';
+            left: -2px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #000;
+            top: 10%;
+            z-index: 999;
+        }
+
+        .right .discription {
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        .right .detail {
+            font-size: 13px;
+            font-weight: 700px;
+        }
+
+        .mb-3 {
+            margin-bottom: 10px;
+        }
+
+        .skill-box {
+            border-bottom: 2px solid #505561;
+            display: inline-block;
+            padding: 4px;
+            font-weight: 700;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .class-50 {
+            width: 50%;
+        }
+
+        .project-container {
+            position: relative;
+            padding-left: 15px;
+            margin-bottom: 10px;
+        }
+
+        .project-container::after {
+            position: absolute;
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: #505561;
+            border-radius: 50%;
+            left: 0;
+            top: calc(50% - 3px);
+        }
+
+        .project-container .project-title {
+            color: var(--text-primary);
+            font-family: var(--font-secondary);
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .project-discription .icon {
+            font-size: 14px;
+        }
+
+        .project-discription .project-link {
+            font-size: 14px;
+            font-family: var(--font-primary);
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+
+        .border-bottom {
+            border-bottom: 2px solid #505561;
+            display: inline-block;
+            padding-bottom: 6px;
+        }
+
+        .socia-container {
+            background-color: var(--text-primary);
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            border-radius: 50%;
+            font-size: 16px;
+        }
+
+        .social-title {
+            color: var(--text-secondary);
+            font-size: 16px;
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        .social-link>a,
+        .social-link>span {
+            color: #505561;
+            font-size: 14px;
+        }
+        .continue{
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="a4-size">
+        <div class="header section">
+            <h1 class="heading">Fahad Kamran</h1>
+            <p class="designation">Front End Developer</p>
+            <div class="d-flex header-content">
+                <div>
+                    <i class="fa-solid fa-phone icon"></i>
+                    <a class="header-link" href="tel:+92 3462809691">03462809691</a>
+                    <span>,</span>
+                    <a class="header-link" href="tel:+92 3116583801">03116583801</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope icon"></i>
+                    <a class="header-link" href="mailto:fahadcs512@gmail.com">fahadcs512@gmail.com</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-github icon"></i>
+                    <a class="header-link" href="https://github.com/fahad-kamran"
+                        target="_blank">https://github.com/fahad-kamran</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-location-dot icon"></i>
+                    <span class="header-link">Karachi, Pakistan</span>
+                </div>
+            </div>
+        </div>
+        <div class="objective section">
+            <h2 class="subheading">Objective</h2>
+            <p class="discription">I am a front-end developer having 1+ years of hands-on experience, a self-motivated
+                IT professional with knowledge and proficiency in HTML5, CSS3, JavaScript, and mobile responsive web
+                development, as well as strong skills and ability in writing clean and efficient code seeks the position
+                of Front-End Web Developer.</p>
+        </div>
+        <div class="experience section">
+            <h2 class="subheading">EXPERIENCE</h2>
+            <div class="d-flex">
+                <div class="left">
+                    <h5 class="date">Aug/2021 - Ongoing</h5>
+                    <p class="discription">Karachi</p>
+                </div>
+                <div class="right">
+                    <h6 class="title">Web Developer</h6>
+                    <p class="designation">Xolva Pvt. Ltd.</p>
+                    <span>
+                        <i class="fa-solid fa-link icon"></i>
+                        <a href="https://xolva.com/" class="link" target="_blank">https://xolva.com/</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="education section">
+            <h2 class="subheading">Education</h2>
+            <div class="d-flex mb-3">
+                <div class="left">
+                    <h5 class="date">2017 - 2021</h5>
+                    <p class="discription">Karachi</p>
+                </div>
+                <div class="right">
+                    <h6 class="title">BSCS</h6>
+                    <p class="designation">Federal Urdu University of Arts,Science and Technology</p>
+                    <p class="discription">GPA <span class="text-secondary">3.0</span> / <b>4</b></p>
+                    <p class="detail">Data Structure, Data Science, Data Mining and Web Development.</p>
+                </div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="left">
+                    <h5 class="date">2014 - 2016</h5>
+                    <p class="discription">Karachi</p>
+                </div>
+                <div class="right">
+                    <h6 class="title">FSC</h6>
+                    <p class="designation">Formen College</p>
+                    <p class="discription"><span class="text-secondary">62 %</span></p>
+                    <p class="detail">Math, Physics, Chemistry</p>
+                </div>
+            </div>
+            <div class="d-flex mb-3">
+                <div class="left">
+                    <h5 class="date">2014</h5>
+                    <p class="discription">Karachi</p>
+                </div>
+                <div class="right">
+                    <h6 class="title">SSC</h6>
+                    <p class="designation">Karachi Board</p>
+                    <p class="discription"><span class="text-secondary">77 %</span></p>
+                    <p class="detail">Biology, Chemistry, Maths and Physics.</p>
+                </div>
+            </div>
+        </div>
+        <div class="course section">
+            <h2 class="subheading">Course</h2>
+            <div class="d-flex">
+                <div class="class-50">
+                    <p class="designation">Web and mobile hybrid</p>
+                    <p class="discription">Sylani welfare trust</p>
+                </div>
+                <div class="class-50">
+                    <p class="designation">Graphic Designing</p>
+                    <p class="discription">Sylani welfare trust</p>
+                </div>
+            </div>
+        </div>
+        <div class="skill section">
+            <h2 class="subheading">Skills</h2>
+            <div class="skill-box">HTML</div>
+            <div class="skill-box">CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">Boostrap</div>
+            <div class="skill-box">React-Js</div>
+            <div class="skill-box">Redux</div>
+            <div class="skill-box">Material-Ui</div>
+            <div class="skill-box">Firebase</div>
+            <div class="skill-box">Github</div>
+            <div class="skill-box">React Native Expo Cli</div>
+        </div>
+        <div class="continue">
+            <p>Continued on next page. <i class="fa-solid fa-arrow-right-long"></i></p>
+        </div>
+    </div>
+    <div class="a4-size">
+        <div class="projects section">
+            <h2 class="subheading">Projects</h2>
+            <div class="project-container">
+                <h4 class="project-title">E-Commerce Website</h4>
+                <span class="project-discription">
+                    <i class="fa-solid fa-link icon"></i>
+                    <a href="https://jwelley.000webhostapp.com/mojuri/" class="project-link"
+                        target="_blank">https://jwelley.000webhostapp.com/mojuri/</a>
+                </span>
+            </div>
+            <div class="project-container">
+                <h4 class="project-title">Its Website</h4>
+                <span class="project-discription">
+                    <i class="fa-solid fa-link icon"></i>
+                    <a href="https://xolva-10c7a.web.app/" class="project-link"
+                        target="_blank">https://xolva-10c7a.web.app/</a>
+                </span>
+            </div>
+            <div class="project-container">
+                <h4 class="project-title">Aqua Di Vita</h4>
+                <span class="project-discription">
+                    <i class="fa-solid fa-link icon"></i>
+                    <a href="https://aqua-di-vita.web.app/" class="project-link"
+                        target="_blank">https://aqua-di-vita.web.app/</a>
+                </span>
+            </div>
+            <div class="project-container">
+                <h4 class="project-title">Almanan Properties</h4>
+                <span class="project-discription">
+                    <i class="fa-solid fa-link icon"></i>
+                    <a href="https://almanan-builders.web.app/" class="project-link"
+                        target="_blank">https://almanan-builders.web.app/</a>
+                </span>
+            </div>
+            <div class="project-container">
+                <h4 class="project-title">Smart Move</h4>
+                <span class="project-discription">
+                    <i class="fa-solid fa-link icon"></i>
+                    <a href="https://fahad-kamran.github.io/smartmove/" class="project-link"
+                        target="_blank">https://fahad-kamran.github.io/smartmove/</a>
+                </span>
+            </div>
+            <div class="project-container">
+                <h4 class="project-title">Delayno Sales</h4>
+                <span class="project-discription">
+                    <i class="fa-solid fa-link icon"></i>
+                    <a href="https://jwelley.000webhostapp.com/delayno-sales/" class="project-link"
+                        target="_blank">https://jwelley.000webhostapp.com/delayno-sales/</a>
+                </span>
+            </div>
+            <div class="project-container">
+                <h4 class="project-title">Moderna Theme</h4>
+                <span class="project-discription">
+                    <i class="fa-solid fa-link icon"></i>
+                    <a href="https://react-moder.web.app/" class="project-link"
+                        target="_blank">https://react-moder.web.app/</a>
+                </span>
+            </div>
+            <div class="project-container">
+                <h4 class="project-title">News Letter</h4>
+                <span class="project-discription">
+                    <i class="fa-solid fa-link icon"></i>
+                    <a href="https://fahad-kamran.github.io/order_confirmation_email_template/" class="project-link"
+                        target="_blank">https://fahad-kamran.github.io/order_confirmation_email_template/</a>
+                </span>
+            </div>
+        </div>
+        <div class="social section">
+            <h2 class="subheading border-bottom">Find Me Online</h2>
+            <div class="d-flex">
+                <div class="class-50 d-flex align-items-center mb-3">
+                    <span class="socia-container">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </span>
+                    <span>
+                        <h3 class="social-title">LinkedIn</h3>
+                        <h5 class="social-link">
+                            <a href="https://www.linkedin.com/in/fahad-kamran0346" target="_blank">Fahad Kamran</a>
+                        </h5>
+                    </span>
+                </div>
+                <div class="class-50 d-flex align-items-center mb-3">
+                    <span class="socia-container">
+                        <i class="fa-brands fa-skype"></i>
+                    </span>
+                    <span>
+                        <h3 class="social-title">Skype</h3>
+                        <h5 class="social-link">
+                            <span>live:.cid.4e9a75fca3c597f8</span>
+                        </h5>
+                    </span>
+                </div>
+                <div class="class-50 d-flex align-items-center mb-3">
+                    <span class="socia-container">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </span>
+                    <span>
+                        <h3 class="social-title">Facebook</h3>
+                        <h5 class="social-link">
+                            <a href="https://www.facebook.com/fahad.kamran.35/" target="_blank">fahad.kamran.35</a>
+                        </h5>
+                    </span>
+                </div>
+                <div class="class-50 d-flex align-items-center mb-3">
+                    <span class="socia-container">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </span>
+                    <span>
+                        <h3 class="social-title">Whatsapp</h3>
+                        <h5 class="social-link">
+                            <a href="tel:+92 3462809691" target="_blank">03462809691</a>
+                        </h5>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
